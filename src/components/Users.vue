@@ -73,10 +73,9 @@ li {
 	border: 1px solid #000;
 	padding: 1em 0.33em;
 	/*text-align: left;*/
-	background: yellow;
+	background: #efefef;
 }
 .contacted {
 	text-decoration: line-through;
-	background: lightgreen;
 }
 </style>
