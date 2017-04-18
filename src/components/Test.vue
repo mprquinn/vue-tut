@@ -1,9 +1,18 @@
 <template>
 	<div class="test">
 		<h1>{{title}}</h1>
+		<input type="text" v-model="title"><br>
 		<p>
-			Welcome, {{user.firstName}}
+			Welcome, 
+			<span v-if="showName">{{user.firstName}}</span>
+			<span v-else>Anonymous</span>
 		</p>
+		<ul>
+			<li v-for="item in items">
+				{{item.title}}
+			</li>
+		</ul>
+		<button v-on:click="greet('Hello World')">Say Greeting</button>
 	</div>
 </template>
 
@@ -17,7 +26,17 @@
 					firstName: 'Jane',
 					lastName: 'Doe'
 				},
-				active: true
+				showName: true,
+				items: [
+					{title: 'An Item'},
+					{title: 'A Second Item'},
+					{title: 'A Third Item'}
+				],
+			}
+		},
+		methods: {
+			greet: function (greeting) {
+				alert(greeting);
 			}
 		}
 	}
