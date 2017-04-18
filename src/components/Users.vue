@@ -63,7 +63,20 @@
 </script>
 
 <style scoped>
+ul {
+	margin-top: 3em;
+}
+li {
+	list-style: none;
+	width: 33%;
+	margin: 1em auto;
+	border: 1px solid #000;
+	padding: 1em 0.33em;
+	/*text-align: left;*/
+	background: yellow;
+}
 .contacted {
 	text-decoration: line-through;
+	background: lightgreen;
 }
 </style>
